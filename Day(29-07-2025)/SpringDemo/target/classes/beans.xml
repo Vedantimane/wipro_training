@@ -1,0 +1,22 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Department Bean -->
+    <bean id="department" class="springdemo.dept.beans.Department">
+       <!-- <property name="deptCode" value="Fin"/>-->
+       <!-- <property name="deptName" value="Finance"/>-->
+       <constructor-arg value="AI"></constructor-arg>
+        <constructor-arg value="Artificial Intelliegnce"></constructor-arg>
+    </bean>
+
+    <!-- College Bean -->
+    <bean id="college" class="springdemo.dept.beans.College">
+      <!--  <property name="collegename" value="VPKBIET"/>
+        <property name="department" ref="department"/>-->
+        <constructor-arg value="VPKBIET baramati"></constructor-arg>
+         <constructor-arg  ref="department"></constructor-arg>
+    </bean>
+
+</beans>

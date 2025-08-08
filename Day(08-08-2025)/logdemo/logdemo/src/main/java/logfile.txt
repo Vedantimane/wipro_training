@@ -1,0 +1,2 @@
+2025-08-08T12:13:56.252+05:30 ERROR 42252 --- [logdemo] [http-nio-8080-exec-1] c.log.logdemo.controller.LogController   : --Error--
+2025-08-08T12:13:56.254+05:30  WARN 42252 --- [logdemo] [http-nio-8080-exec-1] c.log.logdemo.controller.LogController   : --WARN--
