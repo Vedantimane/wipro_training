@@ -19,16 +19,16 @@ public class UberUserServiceImpl implements UberUserService {
 	
 
 	@Override
-	public void book(UberUser user) {
+	public void book(UberUser userUber) {
 		// TODO Auto-generated method stub
 
-		uberUserRepository.save(user);
-		  kafkaTemplate.send(AppConstant.OUTGOING_TOPIC_NAME, user);
+		uberUserRepository.save(userUber);
+		  kafkaTemplate.send(AppConstant.OUTGOING_TOPIC_NAME, userUber);
 	}
 
 	@Override
-	public void sentUserDetails(UberUser user) {
-		// TODO Auto-generated method stub
+	public void sentUserDetails() {
+		uberUserRepository.findAll();
 
 	}
 

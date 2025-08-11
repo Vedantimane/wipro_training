@@ -1,25 +1,29 @@
 package com.booking.Uberuser.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Data
 @Entity
-@Table(name="uber_user")
+@Table(name = "uber_users")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class UberUser {
-	
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	int uberUserId;
-	
-	String uberId;
-	String SourceLocation;
-	String destinationLocation;
-	boolean status;
-	
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int uberUserid;
+
+    @Column(name = "pickup_location")
+    private String pickupLocation;
+
+    @Column(name = "destination_location")
+    private String destinationLocation;
+
+    @Column(name = "user_name")
+    private String userName;
+
+    
 }

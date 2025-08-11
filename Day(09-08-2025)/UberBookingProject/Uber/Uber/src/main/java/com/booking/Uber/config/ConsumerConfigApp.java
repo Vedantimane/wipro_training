@@ -31,7 +31,7 @@ public class ConsumerConfigApp {
 	public JsonDeserializer<UberUser> jsonDeserializer() {
 	    JsonDeserializer<UberUser> jsonDeserializer = new JsonDeserializer<>(UberUser.class)
 	    		.ignoreTypeHeaders();
-	    //jsonDeserializer.addTrustedPackages("*");
+	  
 	    return jsonDeserializer;
 	}
 

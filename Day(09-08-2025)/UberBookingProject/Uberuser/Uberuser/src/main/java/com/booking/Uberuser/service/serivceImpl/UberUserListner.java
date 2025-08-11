@@ -19,8 +19,7 @@ public class UberUserListner {
 	{
 		
 		System.out.println("--Message Received by UberUser="+uberUser);
-		UberUser uberUserDB=uberUserRepository.findById(uberUser.getUberUserId()).get();
-		uberUserDB.setStatus(uberUser.isStatus());
+		UberUser uberUserDB=uberUserRepository.findById(uberUser.getUberUserid()).get();
 		uberUserRepository.save(uberUserDB);
 		
 	}

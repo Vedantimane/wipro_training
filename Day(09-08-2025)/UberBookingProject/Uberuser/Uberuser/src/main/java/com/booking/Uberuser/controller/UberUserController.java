@@ -1,6 +1,7 @@
 package com.booking.Uberuser.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,9 +18,15 @@ public class UberUserController {
 	UberUserService uberUserService;
 	
 	@PostMapping
-	void pay(@RequestBody UberUser uberUser)
+	void book(@RequestBody UberUser uberUser)
 	{
-		uberUserService.book(uberUser);;
+		uberUserService.book(uberUser);
+	}
+	
+	@GetMapping
+	void findall()
+	{
+		uberUserService.sentUserDetails();;
 	}
 
 }

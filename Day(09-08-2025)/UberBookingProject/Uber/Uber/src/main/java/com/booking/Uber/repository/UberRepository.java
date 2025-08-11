@@ -8,6 +8,8 @@ import com.booking.Uber.entity.Uber;
 @Repository
 public interface UberRepository extends JpaRepository<Uber, Integer> {
 	
-	Uber findByUberId(String uberId);
+	Uber findByUberUserId(String uberUserId);
+
+
 
 }

@@ -6,6 +6,6 @@ public interface UberUserService {
 	
 	void book(UberUser user);
 	
-	void sentUserDetails(UberUser user);
+	void sentUserDetails();
 
 }

@@ -1,6 +1,9 @@
 package com.booking.Uber.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,11 +13,10 @@ import com.booking.Uber.entity.Uber;
 import com.booking.Uber.service.UberService;
 
 @RestController
-@RequestMapping("uber")
+@RequestMapping("/uber")
 public class UberController {
-
 	@Autowired
-	private UberService uberService;
+	UberService uberService;
 	
 	@PostMapping
 	void save(@RequestBody Uber uber)
@@ -23,4 +25,10 @@ public class UberController {
 		
 		
 	}
+	
+	@GetMapping
+	List<Uber> findAll(){
+		return uberService.findAll();
+	}
+
 }

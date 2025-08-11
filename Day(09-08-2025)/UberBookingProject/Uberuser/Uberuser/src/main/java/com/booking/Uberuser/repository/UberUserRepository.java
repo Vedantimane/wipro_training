@@ -10,6 +10,6 @@ import com.booking.Uberuser.entity.UberUser;
 @Repository
 public interface UberUserRepository extends JpaRepository<UberUser, Integer> {
 	
-//	Optional<UberUser> findByUberId(String uberId);
+
 
 }

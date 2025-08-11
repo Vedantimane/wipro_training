@@ -16,9 +16,11 @@ public class Uber {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	int id;
 	
-	String uberId;
+	String uberUserId;
 	
 	Double uberPrice;
+	
+	Boolean uberStatus;
 	
 	
 
