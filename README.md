@@ -75,11 +75,11 @@ This repository contains daily progress and practice files from my Wipro trainin
 - Documented full workflow in README.
 - Final push to GitHub repository.
 
-  ### ✅ 9 August 2025
+### ✅ 9 August 2025
 -Developed Uberuser microservice.
 -Connected Duber microservice via Kafka messaging.
 
-  ### ✅ 11 August 2025
+### ✅ 11 August 2025
 -Explored JWT authentication implementation.
 -Started frontend development and practiced HTML tags.
 
