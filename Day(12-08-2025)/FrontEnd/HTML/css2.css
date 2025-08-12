@@ -1,0 +1,24 @@
+/* Universal Selector */
+* {
+    color: rgb(200, 67, 67);
+    font-size: 18px;
+    background-color: #f9f9f9;
+}
+
+/* Group Selector */
+h1, p {
+    color: blue;
+    font-size: 20px;
+}
+
+/* Class Selector */
+/* .highlight {
+    color: green;
+    font-size: 22px;
+} */
+
+/* ID Selector */
+#special {
+    color: red;
+    font-size: 24px;
+}

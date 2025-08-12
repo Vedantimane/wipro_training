@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff8f3;
+  color: #333;
+  padding-top: 70px; /* space for fixed navbar */
+}
+
+
+
+/* Hero */
+.hero {
+  background: url('background-with-plane-blank-space-father-s-day.jpg') center/cover no-repeat;
+  color: #333;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.meta {
+  font-style: italic;
+}
+
+/* Layout */
+.blog-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+main img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.intro {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+/* CTA */
+.cta {
+  display: inline-block;
+   background-color: #ffdab9;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  transition: background 0.3s ease;
+}
+
+.cta:hover {
+ background-color: #ffcba4;
+}
+
+/* Sidebar */
+aside {
+  background-color: #ffede7;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.about-author img {
+  border-radius: 50%;
+}
+
+.recent-posts ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recent-posts a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Footer */
+footer {
+  background-color: #ffcba4;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .blog-layout {
+    grid-template-columns:  1fr;
+  }
+}
