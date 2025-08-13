@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Var, Let, Const Scope</title>
+</head>
+<body>
+
+<h1>Check Console for Output</h1>
+
+<script>
+    var x = 4; // global scope variable
+    const z = 9; // constant variable
+
+    function f() {
+        x = 9; // changes global x
+        let y = 8; // block scope variable
+
+        console.log("x in function is " + x);
+        console.log("y in function is " + y);
+
+        if (true) {
+            let z = 18; // block scope z
+            console.log("y in if block is " + y); // y is accessible here
+            console.log("z in if block is " + z); // block's own z
+        }
+
+        console.log("z in function is " + z); // uses global z
+    }
+
+    f(); // call function
+
+    console.log("x outside function is " + x);
+    // console.log("y outside function is " + y); // ❌ Error: y not defined
+</script>
+
+</body>
+</html>

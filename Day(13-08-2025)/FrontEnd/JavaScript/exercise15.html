@@ -1,0 +1,47 @@
+<!-- Ex13: Create a simple "To-Do List" app in HTML, CSS, and JavaScript. The app should:
+Have an input field to enter a new task.
+Have a button to add the task to the list.
+Display tasks in a list below the input field.
+Each task should have a "Delete" button next to it.
+Clicking "Delete" should remove the task from the list. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        input {
+            padding: 5px;
+            width: 200px;
+        }
+        button {
+            padding: 5px 10px;
+            margin-left: 5px;
+        }
+        li {
+            margin: 5px 0;
+        }
+        .delete-btn {
+            margin-left: 10px;
+            color: red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <input type="text" id="task" placeholder="Enter new task" />
+    <button onclick="addTask()">Add Task</button>
+
+    <ul id="taskList"></ul>
+
+    <script src="exerciese15.js">
+      
+    </script>
+</body>
+</html>

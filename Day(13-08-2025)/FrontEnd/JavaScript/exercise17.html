@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+ <style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 20px;
+    }
+
+    #quizContainer {
+        max-width: 400px;
+        margin: auto;
+    }
+
+    #question {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .option {
+        display: block;
+        margin: 8px auto; /* center the button horizontally */
+        padding: 8px 15px;
+        cursor: pointer;
+        border: 1px solid #000;
+        border-radius: 4px;
+        background-color: #f0f0f0;
+        width: 80%; /* optional: make options same width */
+        text-align: center; /* center the text inside */
+    }
+
+    #feedback {
+        margin: 10px 0;
+        font-weight: bold;
+    }
+
+    button {
+        padding: 8px 15px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    #score {
+        margin-top: 15px;
+        font-size: 18px;
+    }
+</style>
+
+
+</head>
+<body>
+    <h1>Quiz App</h1>
+    <div id="quizContainer">
+        <h2 id="question">Question text</h2>
+        <div id="options">
+          
+        </div>
+        <p id="feedback"></p>
+        <button onclick="nextQuestion()">Next Question</button>
+        <p id="score">Score: 0</p>
+    </div>
+
+    <script src="exerciese17.js">
+        
+    </script>
+</body>
+</html>

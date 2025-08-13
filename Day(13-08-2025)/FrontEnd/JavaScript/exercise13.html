@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form Console Validation</title>
+    <link rel="stylesheet" href="exercise13.css">
+</head>
+<body>
+
+<div class="card">
+    <h1>Login</h1>
+    <form id="loginForm" novalidate>
+        <label>Email:</label>
+        <input type="text" id="email" placeholder="Enter your email" onblur="validateEmail()">
+
+        <label>Password:</label>
+        <input type="password" id="password" placeholder="Enter your password" onblur="validatePassword()">
+
+        <button type="button" onclick="validateForm()">Login</button>
+    </form>
+</div>
+
+<script src="exercise13.js"></script>
+</body>
+</html>

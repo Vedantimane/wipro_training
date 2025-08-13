@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+ <style>
+        body {
+            text-align: center; /* Centers content */
+        }
+        #galleryImage {
+            width: 500px; /* Bigger width */
+            height: auto;  /* Maintain aspect ratio */
+            margin: 20px 0; /* Some space around image */
+            border-radius: 10px; /* Optional: rounded corners */
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+        }
+    </style>
+
+<body>
+    <h1>Nature Images</h1>
+    <img id="galleryImage" src="img1.jpeg" width="300" height="200" alt="Gallery Image">
+<br>
+<button onclick="prevImage()">Prev</button>
+<button onclick="nextImage()">Next</button>
+
+</body>
+<script src="exerciese16.js"></script>
+</html>
