@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Employee Addresses</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body>
+<div class="container mt-4">
+    <h2>Employee Addresses</h2>
+    <a th:href="@{/addresses/new}" class="btn btn-primary mb-3">Add Address</a>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>Address</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="addr : ${addresses}">
+            <td th:text="${addr.employee.employeeId}"></td>
+            <td th:text="${addr.employeeAddress}"></td>
+            <td>
+                <a th:href="@{/addresses/edit/{id}(id=${addr.employeeId})}" class="btn btn-warning btn-sm">Edit</a>
+                <a th:href="@{/addresses/delete/{id}(id=${addr.employeeId})}" class="btn btn-danger btn-sm"
+                   onclick="return confirm('Are you sure?')">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

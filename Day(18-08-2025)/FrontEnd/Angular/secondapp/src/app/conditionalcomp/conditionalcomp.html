@@ -1,0 +1,59 @@
+ <button (click)="toggle()">Hide / UnHide</button>
+
+@if (flag) {
+  <h1>Flag is True</h1>
+} @else {
+  <h1>Flag is False</h1>
+}
+
+<h1>Countries</h1>
+<button (click)="loadCountries()">Load Countries</button>
+
+<select>
+  <option value="">-- Select a country --</option>
+  @for (country of loadedCountries; track country) {
+    <option [value]="country">{{ country }}</option>
+  }
+</select>
+
+
+<select [(ngModel)]="color">
+  <option value="red">Red</option>
+  <option value="green">Green</option>
+  <option value="black">Black</option>
+   <option value="blue">Blue</option>
+    <option value="orange">Orange</option>
+  <option value="default">Default</option>
+</select>
+ 
+ 
+@switch (color) {
+ 
+  @case ("red") {
+    <div style="color: red;"><h1>Red Color</h1></div>
+ 
+ 
+  }
+  @case ("green") {
+    <div style="color: green;"><H1>Green Color</H1></div>
+ 
+  }
+  @case ("black") {
+    <div ><h1>Black Color</h1></div>
+ 
+  }
+
+  @case ("blue") {
+    <div style="color:blue;"><H1>Blue Color</H1></div>
+ 
+  }
+  @case ("orange") {
+    <div style="color:orangered;"><H1>Orange Color</H1></div>
+ 
+  }
+  
+  @default {
+    <div style="color: cadetblue;"><H1>Default Color</H1></div>
+  }
+}
+  

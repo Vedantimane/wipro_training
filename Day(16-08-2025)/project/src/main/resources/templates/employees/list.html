@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Employees</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body>
+<div class="container mt-4">
+    <h2>Employees</h2>
+    <a th:href="@{/employees/new}" class="btn btn-primary mb-3">Add Employee</a>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Contact</th>
+            <th>Email</th>
+            <th>Department</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="emp : ${employees}">
+            <td th:text="${emp.employeeId}"></td>
+            <td th:text="${emp.employeeName}"></td>
+            <td th:text="${emp.employeeContact}"></td>
+            <td th:text="${emp.employeeEmail}"></td>
+            <td th:text="${emp.department != null ? emp.department.departmentName : 'N/A'}"></td>
+            <td>
+                <a th:href="@{/employees/edit/{id}(id=${emp.employeeId})}" class="btn btn-warning btn-sm">Edit</a>
+                <a th:href="@{/employees/delete/{id}(id=${emp.employeeId})}" class="btn btn-danger btn-sm"
+                   onclick="return confirm('Are you sure?')">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

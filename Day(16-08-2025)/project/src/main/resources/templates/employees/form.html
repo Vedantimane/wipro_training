@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Employee Form</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body>
+<div class="container mt-4">
+    <h2 th:text="${employee.employeeId != 0} ? 'Edit Employee' : 'Add Employee'"></h2>
+
+    <form th:action="@{/employees}" th:object="${employee}" method="post">
+        <input type="hidden" th:field="*{employeeId}"/>
+
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" th:field="*{employeeName}" class="form-control" placeholder="Enter name"/>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Contact</label>
+            <input type="text" th:field="*{employeeContact}" class="form-control" placeholder="Enter contact"/>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" th:field="*{employeeEmail}" class="form-control" placeholder="Enter email"/>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Department</label>
+            <select th:field="*{department.departmentId}" class="form-control">
+                <option th:each="dept : ${departments}" 
+                        th:value="${dept.departmentId}" 
+                        th:text="${dept.departmentName}">
+                </option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-success">Save</button>
+        <a th:href="@{/employees}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+</body>
+</html>

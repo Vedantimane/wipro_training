@@ -1,0 +1,11 @@
+<H1>
+    Exercise: 14
+</H1>
+<input type="text" [(ngModel)]="searchText" placeholder="Enter your name">
+
+<h1>List of names</h1>
+<select size="6" style="width:200px;">
+  @for (name of filteredNames(); track name) {
+    <option [value]="name">{{ name }}</option>
+  }
+</select>

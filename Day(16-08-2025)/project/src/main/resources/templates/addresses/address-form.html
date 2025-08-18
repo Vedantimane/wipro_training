@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Address Form</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body>
+<div class="container mt-4">
+    <h2 th:text="${address.employeeId != 0} ? 'Edit Address' : 'Add Address'"></h2>
+
+    <form th:action="@{/addresses}" th:object="${address}" method="post">
+        <!-- Hidden ID field -->
+        <input type="hidden" th:field="*{id}"/>
+
+        <!-- Employee dropdown -->
+        <div class="mb-3">
+            <label class="form-label">Employee</label>
+           <select th:field="*{employee}" class="form-control">
+    <option value="" disabled>Select Employee</option>
+    <option th:each="emp : ${employees}"
+            th:value="${emp}"
+            th:text="${emp.employeeName}">
+    </option>
+</select>
+
+        </div>
+
+        <!-- Address input -->
+        <div class="mb-3">
+            <label class="form-label">Address</label>
+            <input type="text" th:field="*{employeeAddress}" class="form-control" placeholder="Enter address">
+        </div>
+
+        <!-- Buttons -->
+        <button type="submit" class="btn btn-success">Save</button>
+        <a th:href="@{/addresses}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+</body>
+</html>
