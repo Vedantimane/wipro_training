@@ -1,0 +1,91 @@
+/* General page layout */
+:host {
+  display: block;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+  background: #f8fafc; /* Light background */
+  min-height: 100vh;
+}
+
+/* Heading style */
+h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Center all child components */
+:host ::ng-deep app-task,
+:host ::ng-deep app-task-list {
+  display: block;
+  margin: 0 auto 20px auto;
+  max-width: 700px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Hover effect for card-like components */
+:host ::ng-deep app-task:hover,
+:host ::ng-deep app-task-list:hover {
+  transform: translateY(-4px);
+}
+
+/* Add spacing between task list items */
+:host ::ng-deep app-task-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+:host ::ng-deep app-task-list th,
+:host ::ng-deep app-task-list td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+:host ::ng-deep app-task-list th {
+  background: #2c3e50;
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+:host ::ng-deep app-task-list tr:nth-child(even) {
+  background: #f4f6f8;
+}
+
+/* Button styles inside child components */
+:host ::ng-deep button {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+:host ::ng-deep button.add {
+  background: #27ae60;
+  color: white;
+}
+
+:host ::ng-deep button.add:hover {
+  background: #219150;
+}
+
+:host ::ng-deep button.delete {
+  background: #e74c3c;
+  color: white;
+}
+
+:host ::ng-deep button.delete:hover {
+  background: #c0392b;
+}

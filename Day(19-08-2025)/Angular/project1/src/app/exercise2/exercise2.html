@@ -1,0 +1,12 @@
+<p [ngClass]="'app1 app2'">This uses string syntax</p>
+<p [ngClass]="['app1', 'app2']">This uses array syntax</p>
+<p [ngClass]="{'app1': flag1, 'app2': flag2}">This uses object syntax</p>
+<p [ngClass]="getNgClass()">This paragraph uses getNgClass() object</p>
+
+<div [ngStyle]="{'color': 'brown','font-size':'large'}">
+ Hello world
+</div>
+
+<div [ngStyle]="{'color': !flag1 ? 'pink' : 'blue'}">
+  Hello world
+</div>

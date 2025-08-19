@@ -1,0 +1,10 @@
+<div class="task-form">
+  <input #taskDesc type="text" placeholder="Task Description">
+  <select #taskCat>
+    <option value="">Select Category</option>
+    <option value="Work">Work</option>
+    <option value="Personal">Personal</option>
+    <option value="Others">Others</option>
+  </select>
+  <button (click)="addTask(taskDesc.value, taskCat.value)">Add Task</button>
+</div>

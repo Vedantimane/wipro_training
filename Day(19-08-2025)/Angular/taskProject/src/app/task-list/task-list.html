@@ -1,0 +1,26 @@
+<div class="task-container">
+  <h2>Task List</h2>
+
+  <table class="task-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Description</th>
+        <th>Category</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (t of tasks; track t.taskId) {
+        <tr>
+          <td>{{ t.taskId }}</td>
+          <td>{{ t.taskDescription }}</td>
+          <td>{{ t.taskCategory }}</td>
+          <td>
+            <button class="delete-btn" (click)="onDeleteTask(t.taskId)">Delete</button>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

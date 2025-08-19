@@ -1,0 +1,64 @@
+
+<div class="card fruit-card">
+  <img [src]="fruitList.imageUrl" class="card-img-top" [alt]="fruitList.name">
+  <div class="card-body">
+    <h5 class="card-title">{{fruitList.name}}</h5>
+    <p class="card-text">{{fruitList.description}}</p>
+    <p class="card-price">Price: ₹{{fruitList.price}}</p>
+    <button class="btn-delete" (click)="onClick(fruitList.name)">Delete</button>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div> -->
+
+<!-- <div class="container mt-5">
+  
+  <div class="text-center mb-4">
+    <h2 class="display-5">Fresh Fruits Collection</h2>
+    <p class="text-muted">Explore our variety of fresh and delicious fruits</p>
+  </div> -->
+
+  <!-- <div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4" *ngFor="let fruit of fruits">
+      <div class="card h-100 fruit-card">
+        <img [src]="fruit.imageUrl" class="card-img-top" alt="{{fruit.name}}">
+        <div class="card-body">
+          <h5 class="card-title">{{fruit.name}}</h5>
+          <p class="card-text">{{fruit.description}}</p>
+          <p class="card-price">Price: ₹{{fruit.price}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- <div class="container text-center">
+  <div class="row row-cols-4">
+    @for (item of fruits; track $index) {
+      <div class="col">
+        <div class="card fruit-card" style="width: 18rem;">
+          <img src="{{item.imageUrl}}" class="card-img-top" alt="{{item.name}}">
+          <div class="card-body">
+            <h5 class="card-title">{{item.name}}</h5>
+            <p class="card-text">{{item.description}}</p>
+            <p class="card-price">Price: ₹{{item.price}}</p>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div> -->
+
