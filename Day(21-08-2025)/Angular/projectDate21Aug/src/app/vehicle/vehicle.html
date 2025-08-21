@@ -1,0 +1,56 @@
+<h2 class="title">Vehicles</h2>
+
+<div class="box-grid">
+  @for (vehicle of vehicles; track $index) {
+    <div class="vehicle-box">
+      <p><strong>ID:</strong> {{ vehicle.id }}</p>
+      <p><strong>Make:</strong> {{ vehicle.make }}</p>
+      <p><strong>Fuel:</strong> {{ vehicle.fuelType }}</p>
+      <p><strong>Model:</strong> {{ vehicle.model }}</p>
+      <p><strong>Price:</strong> ₹{{ vehicle.price }}</p>
+      <div class="btn-group">
+        <button class="edit-btn" (click)="edit(vehicle.id)">Edit</button>
+        <button class="delete-btn" (click)="delete(vehicle.id)">Delete</button>
+      </div>
+    </div>
+  }
+</div>
+
+<!-- Forms placed side by side -->
+<div class="form-wrapper">
+  <!-- Update Vehicle Form -->
+  <div class="form-container">
+    <h3>Edit Vehicle</h3>
+    <label>Make:</label>
+    <input type="text" [(ngModel)]="vehicleEdit.make" placeholder="Make"/>
+
+    <label>Fuel Type:</label>
+    <input type="text" [(ngModel)]="vehicleEdit.fuelType" placeholder="Fuel Type"/>
+
+    <label>Model:</label>
+    <input type="text" [(ngModel)]="vehicleEdit.model" placeholder="Model"/>
+
+    <label>Price:</label>
+    <input type="number" [(ngModel)]="vehicleEdit.price" placeholder="Price"/>
+
+    <button class="update-btn" (click)="update()">Update</button>
+  </div>
+
+  <!-- Save New Vehicle Form -->
+  <div class="form-container">
+    <h3>Add New Vehicle</h3>
+    <label>Make:</label>
+    <input type="text" [(ngModel)]="vehicleAdd.make" placeholder="Make"/>
+
+    <label>Fuel Type:</label>
+    <input type="text" [(ngModel)]="vehicleAdd.fuelType" placeholder="Fuel Type"/>
+
+    <label>Model:</label>
+    <input type="text" [(ngModel)]="vehicleAdd.model" placeholder="Model"/>
+
+    <label>Price:</label>
+    <input type="number" [(ngModel)]="vehicleAdd.price" placeholder="Price"/>
+
+    <button class="save-btn" (click)="save()">Save</button>
+  </div>
+</div>

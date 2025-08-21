@@ -1,0 +1,74 @@
+{
+  "vehicles": [
+    {
+      "make": "Honda",
+      "fuelType": "Diesel",
+      "model": "Civic",
+      "price": 18000,
+      "id": "d981"
+    },
+    {
+      "make": "Tesla",
+      "fuelType": "Electric",
+      "model": "Model 3",
+      "price": 35000,
+      "id": "70eb"
+    },
+    {
+      "make": "Hyundai",
+      "fuelType": "CNG",
+      "model": "i20",
+      "price": 12000,
+      "id": "643a"
+    },
+    {
+      "id": "dfb9",
+      "make": "Lamborghini",
+      "fuelType": "Petrol",
+      "model": "Huracán EVO",
+      "price": 250000
+    },
+    {
+      "id": "536e",
+      "make": "Maruti Suzuki",
+      "fuelType": "Petrol",
+      "model": "Swift",
+      "price": 8000
+    },
+    {
+      "id": "d165",
+      "make": "abc",
+      "fuelType": "Petrol",
+      "model": "Swift",
+      "price": 8000
+    },
+    {
+      "id": "9631",
+      "make": "zyx",
+      "fuelType": "Petrol",
+      "model": "Swift",
+      "price": 8000
+    },
+    {
+      "id": "d4e3",
+      "make": "tesla",
+      "fuelType": "Petrol",
+      "model": "Swift",
+      "price": 80005
+    },
+    {
+      "id": "6251",
+      "make": "vednati",
+      "fuelType": "air",
+      "model": "zero",
+      "price": 0
+    },
+    {
+      "id": "fe14",
+      "make": "",
+      "fuelType": "",
+      "model": "",
+      "price": 0
+    }
+  ]
+}

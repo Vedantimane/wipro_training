@@ -10,7 +10,7 @@ import { ITask } from '../itask';
 export class Task {
  @Output() taskAdded = new EventEmitter<ITask>();
 
-  private nextId = 1; // auto increment id
+  private nextId = 1; 
 
   addTask(desc: string, cat: string) {
     if (!desc || !cat) return;
@@ -21,6 +21,6 @@ export class Task {
       taskCategory: cat
     };
 
-    this.taskAdded.emit(newTask); // send to parent
+    this.taskAdded.emit(newTask); 
   }
 }

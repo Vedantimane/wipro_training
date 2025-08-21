@@ -1,0 +1,27 @@
+
+  <h1>Pipe Cases Demo</h1>
+
+  <label>Enter your name</label><br><br>
+  <input type="text" [(ngModel)]="firstname" placeholder="Enter your name">
+
+       <br>
+    <h3>appHighlightstrikethru Output: </h3><h1 appHighlightstrikethru>{{ firstname }}</h1>
+  <br>
+  <h3>UpperCase Pipe Output: </h3><h1>{{ firstname | uppercase }}</h1>
+  <br>
+  <h3>LowerCase Pipe Output: </h3><h1>{{ firstname | lowercase }}</h1>
+  <br>
+   <h3>TitleCase Pipe Output: </h3><h1>{{ firstname | titlecase }}</h1>
+
+
+
+ <input type="date" placeholder="enter the date" [(ngModel)]="date">
+ <h3>Short Date</h3>
+ <h1>{{date | date:'short'}}</h1>
+
+   <label>Enter Celuis Value</label><br><br>
+ <input type="text" [(ngModel)]="celius" placeholder="Enter your celius">
+   <h3>Celsius to Fahrenheit Output: </h3><h1>{{ celius | celuistoFar }}</h1>
+
+
+ 
