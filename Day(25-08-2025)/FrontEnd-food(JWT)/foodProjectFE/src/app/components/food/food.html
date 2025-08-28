@@ -1,0 +1,30 @@
+<div class="food-container">
+  <h2 class="food-list-title">Food List</h2>
+
+  <div class="food-grid">
+    <div class="food-card" *ngFor="let food of foods">
+      <div class="food-image-wrapper">
+        <img [src]="food.foodimg" alt="{{food.foodName}}">
+        <span class="favorite-icon">♥</span>
+      </div>
+
+      <div class="food-details">
+        <h3>{{food.foodName}}</h3>
+        <a href="#" class="food-category">{{food.foodCategory}}</a>
+
+        <div class="food-footer">
+          <span class="food-price">
+            {{ food.foodPrice | currency:'INR':'symbol':'1.0-0' }}
+          </span>
+
+          <!-- Quantity Selector -->
+          <!-- <div class="quantity-selector">
+            <button (click)="decreaseQuantity(food)">-</button>
+            <span>{{food.quantity || 0}}</span>
+            <button (click)="increaseQuantity(food)">+</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

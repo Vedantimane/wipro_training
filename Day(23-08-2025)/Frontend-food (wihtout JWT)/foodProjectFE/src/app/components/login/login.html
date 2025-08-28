@@ -1,0 +1,63 @@
+<!-- <div class="signup-container">
+  <div class="signup-form">
+    <h2>Welcome Back</h2>
+    <p class="subtitle">Login to access your Food Dashboard</p>
+
+    <form (ngSubmit)="onLogin()">
+      <div class="input-group">
+        <label>Email</label>
+        <input type="email" [(ngModel)]="userEmail" name="email" required placeholder="Enter your email"/>
+      </div>
+
+      <div class="input-group">
+        <label>Password</label>
+        <input type="password" [(ngModel)]="userPassword" name="password" required placeholder="Enter your password"/>
+      </div>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <p class="signup-text">
+      Don't have an account? <a routerLink="/signup">Sign up</a>
+    </p>
+  </div>
+
+  <div class="signup-image">
+    <img src="a4f00a8c-f5f6-47ae-bd16-7e0cc0cea2fd.png" alt="Login illustration">
+  </div>
+</div> -->
+
+
+
+<body>
+  <div class="center-wrapper">
+    <div class="signup-container">
+      <div class="signup-form">
+        <h2>Welcome Back</h2>
+        <!-- <p class="subtitle" style="text-align: center;">Login to access your Food Dashboard</p> -->
+
+        <form (ngSubmit)="onLogin()">
+          <div class="input-group">
+            <!-- <label>Email</label> -->
+            <input type="email" [(ngModel)]="userEmail" name="email" required placeholder="Enter your email"/>
+          </div>
+
+          <div class="input-group">
+            <!-- <label>Password</label> -->
+            <input type="password" [(ngModel)]="userPassword" name="password" required placeholder="Enter your password"/>
+          </div>
+
+          <button type="submit">Login</button>
+        </form>
+
+        <!-- <p class="signup-text">
+          Don't have an account? <a routerLink="/signup">Sign up</a>
+        </p> -->
+      </div>
+
+      <div class="signup-image">
+        <img src="https://colorlib.com/etc/regform/colorlib-regform-7/images/signup-image.jpg" alt="Login illustration">
+      </div>
+    </div>
+  </div>
+</body>

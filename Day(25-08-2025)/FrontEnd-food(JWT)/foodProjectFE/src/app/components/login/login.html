@@ -1,0 +1,34 @@
+<div class="center-wrapper">
+  <div class="signup-container">
+    <!-- Form Section -->
+    <div class="signup-form">
+      <h2>Welcome Back</h2>
+      <form>
+        <!-- Email input -->
+        <label for="form2Example1">Email address</label>
+        <input type="email" [(ngModel)]="user.userEmail" name="email" id="form2Example1" placeholder="Enter your email" />
+
+        <!-- Password input -->
+        <label for="form2Example2">Password</label>
+        <input type="password" [(ngModel)]="user.passWord" id="form2Example2" name="passWord" placeholder="Enter your password" />
+
+        <!-- Remember me -->
+        <label>
+          <input type="checkbox" id="form2Example31" checked />
+          Remember me
+        </label>
+
+        <!-- Submit button -->
+        <button type="button" (click)="login()">Sign in</button>
+
+        <!-- Register -->
+        <a [routerLink]="['/login/register']">Not a member? Register</a>
+      </form>
+    </div>
+
+    <!-- Image Section -->
+    <div class="signup-image">
+      <img src="https://colorlib.com/etc/regform/colorlib-regform-7/images/signup-image.jpg" alt="Login illustration">
+    </div>
+  </div>
+</div>

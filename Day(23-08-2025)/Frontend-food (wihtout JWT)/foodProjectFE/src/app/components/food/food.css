@@ -1,0 +1,100 @@
+/* Body background */
+body {
+    background-color: #f6e3e3;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Food container */
+.food-container {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center all content */
+}
+
+/* Food list title */
+.food-list-title {
+    font-family: 'Macondo', cursive; /* same font */
+    font-size: 40px; /* bigger size */
+    color: #333; /* simple dark color */
+    margin-bottom: 20px;
+}
+
+/* Food grid */
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    gap: 30px; /* spacing between cards */
+    justify-content: center;
+}
+
+/* Food card */
+.food-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2); /* stronger shadow */
+    overflow: hidden;
+    padding: 25px; /* bigger padding */
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-8px); /* bigger lift on hover */
+}
+
+/* Food image */
+.food-image-wrapper img {
+    width: 100%;
+    height: 220px; /* taller images */
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* Favorite icon */
+.favorite-icon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: #fff;
+    font-size: 26px; /* bigger heart */
+    cursor: pointer;
+}
+
+/* Food details */
+.food-details h3 {
+    margin: 15px 0 8px 0;
+    font-size: 20px; /* bigger food name */
+}
+
+.food-category {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 16px; /* bigger category */
+}
+
+/* Food footer */
+.food-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.food-price {
+    font-size: 22px; /* bigger price */
+    color: orange;
+    font-weight: bold;
+}
+
+/* Quantity selector buttons */
+.quantity-selector button {
+    width: 32px; /* bigger buttons */
+    height: 32px;
+    border: 1px solid #ccc;
+    background: #f5f5f5;
+    cursor: pointer;
+    border-radius: 5px;
+}

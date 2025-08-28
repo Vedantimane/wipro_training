@@ -1,0 +1,34 @@
+<div class="user-list">
+  <div class="header">
+    <h2>Product List</h2>
+    <button class="add-btn" (click)="addProduct()">Add Product</button>
+    <button class="order-history-btn" [routerLink]="['/orderHistory']">Order History</button>
+  </div>
+
+  <table class="user-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (product of products; track $index) {
+        <tr>
+          <td>{{ product.id }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.category }}</td>
+          <td>₹{{ product.price }}</td>
+          <td>
+            <a class="edit-btn" [routerLink]="['/editProduct', product.id]">Edit</a>
+            <a class="delete-btn" [routerLink]="['/deleteProduct', product.id]">Delete</a> 
+            <a class="place-order-btn" [routerLink]="['/placeOrder', product.id]">Place Order</a>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

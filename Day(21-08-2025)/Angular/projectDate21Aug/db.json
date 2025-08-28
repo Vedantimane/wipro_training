@@ -1,13 +1,6 @@
 {
   "vehicles": [
     {
-      "make": "Honda",
-      "fuelType": "Diesel",
-      "model": "Civic",
-      "price": 18000,
-      "id": "d981"
-    },
-    {
       "make": "Tesla",
       "fuelType": "Electric",
       "model": "Model 3",
@@ -43,13 +36,6 @@
       "price": 8000
     },
     {
-      "id": "9631",
-      "make": "zyx",
-      "fuelType": "Petrol",
-      "model": "Swift",
-      "price": 8000
-    },
-    {
       "id": "d4e3",
       "make": "tesla",
       "fuelType": "Petrol",
@@ -58,17 +44,17 @@
     },
     {
       "id": "6251",
-      "make": "vednati",
-      "fuelType": "air",
-      "model": "zero",
-      "price": 0
+      "make": "tesla",
+      "fuelType": "petrol",
+      "model": "model 4",
+      "price": 7500000
     },
     {
-      "id": "fe14",
-      "make": "",
-      "fuelType": "",
-      "model": "",
-      "price": 0
+      "id": "69a2",
+      "make": "swift",
+      "fuelType": "disel",
+      "model": "model 6",
+      "price": 78000
     }
   ]
 }

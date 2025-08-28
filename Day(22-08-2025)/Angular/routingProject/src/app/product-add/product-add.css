@@ -1,0 +1,55 @@
+.add-product-form {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px 25px;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.add-product-form h2 {
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 28px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group input {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #007acc;
+  box-shadow: 0 0 8px rgba(0, 122, 204, 0.3);
+  outline: none;
+}
+
+.add-btn {
+  width: 100%;
+  padding: 12px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #007acc;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #005fa3;
+  transform: scale(1.03);
+}

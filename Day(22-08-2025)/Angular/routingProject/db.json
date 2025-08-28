@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "id": "f3b2",
+      "name": "Headphones",
+      "category": "Electronics",
+      "price": 5000
+    },
+    {
+      "id": "a9e8",
+      "name": "Organic Honey",
+      "category": "Grocery",
+      "price": 4500
+    },
+    {
+      "id": "c6d4",
+      "name": "Yoga Mat",
+      "category": "Sports",
+      "price": 8999
+    },
+    {
+      "id": "043f",
+      "name": "Mac",
+      "category": "Electronic",
+      "price": 120000000
+    },
+    {
+      "id": "4df0",
+      "name": "Organic Honey",
+      "category": "Grocery",
+      "price": 5900
+    }
+  ]
+}

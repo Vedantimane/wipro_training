@@ -1,0 +1,17 @@
+<h2>Place Order</h2>
+
+<div>
+  <label>Product:</label>
+  <select [(ngModel)]="selectedProductId">
+    <option *ngFor="let product of products" [value]="product.id">
+      {{product.name}} (Available: {{product.quantity}})
+    </option>
+  </select>
+</div>
+
+<div>
+  <label>Quantity:</label>
+  <input type="number" [(ngModel)]="quantity" min="1">
+</div>
+
+<button (click)="placeOrder()">Place Order</button>
