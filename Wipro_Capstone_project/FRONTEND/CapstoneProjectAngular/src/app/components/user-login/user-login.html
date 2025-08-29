@@ -1,0 +1,33 @@
+<div class="login-container">
+  <h2>User Login</h2>
+
+  <!-- Login Form -->
+  <form (ngSubmit)="onLogin()">
+    <label for="email">Email:</label>
+    <input
+      type="email"
+      id="email"
+      [(ngModel)]="email"
+      name="email"
+      required
+    />
+
+    <label for="password">Password:</label>
+    <input
+      type="password"
+      id="password"
+      [(ngModel)]="password"
+      name="password"
+      required
+    />
+
+    <button type="submit">Login</button>
+  </form>
+
+  <!-- Optional error message -->
+  <!-- <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p> -->
+
+  <!-- Navigation buttons -->
+  <button (click)="goToRegistration()">Register</button>
+  <button (click)="onLogout()">Logout</button>
+</div>

@@ -1,0 +1,35 @@
+<div class="product-container">
+  <h2>Available Products</h2>
+
+  <!-- Error Message -->
+  <div *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </div>
+
+  <!-- Show Cards only if products exist -->
+  <div class="cards-container" *ngIf="products.length > 0; else noProducts">
+    <div class="product-card" *ngFor="let product of products">
+      <img [src]="product.productImgUrl" alt="{{product.productName}}" class="product-image" />
+      <div class="product-details">
+        <h3>{{ product.productName }}</h3>
+        <p><strong>Category:</strong> {{ product.productCat }}</p>
+        <p><strong>Description:</strong> {{ product.productDesc }}</p>
+        <p><strong>Make:</strong> {{ product.make }}</p>
+        <p><strong>Manufactured:</strong> {{ product.dateOfManufacture }}</p>
+        <p><strong>Price:</strong> {{ product.productPrice | currency:'INR' }}</p>
+        <p><strong>Available Qty:</strong> {{ product.productAvailableQty }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- No Products Template -->
+  <ng-template #noProducts>
+    <p>No products available</p>
+  </ng-template>
+</div>
+<!-- Search Products -->
+<div class="search-box">
+  <label>Search Products: 
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Type to search..." />
+  </label>
+</div>

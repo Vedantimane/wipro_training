@@ -24,6 +24,7 @@ public class User {
 	String userName;
 	
 	@Column(name = "user_email")
+	@Unq
 	String userEmail;
 	
 	@Column(name = "user_password")
