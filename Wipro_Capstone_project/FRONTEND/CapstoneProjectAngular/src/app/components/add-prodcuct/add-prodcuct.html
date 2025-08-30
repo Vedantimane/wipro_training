@@ -1,0 +1,20 @@
+<div class="admin-container">
+  <h2>{{ isEditMode ? 'Edit Product' : 'Add New Product' }}</h2>
+
+  <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+
+  <div class="product-form">
+ <label>Name: <input [(ngModel)]="product.productName" name="productName" /></label>
+<label>Category: <input [(ngModel)]="product.productCat" name="productCat" /></label>
+<label>Description: <input [(ngModel)]="product.productDesc" name="productDesc" /></label>
+<label>Make: <input [(ngModel)]="product.make" name="make" /></label>
+<label>Qty: <input type="number" [(ngModel)]="product.productAvailableQty" name="productAvailableQty" /></label>
+<label>Price: <input type="number" [(ngModel)]="product.productPrice" name="productPrice" /></label>
+<label>Image URL: <input [(ngModel)]="product.productImgUrl" name="productImgUrl" /></label>
+<label>Date of Manufacture: <input type="date" [(ngModel)]="product.dateOfManufacture" name="dateOfManufacture" /></label>
+
+
+    <button (click)="saveProduct()">{{ isEditMode ? 'Update' : 'Add' }} Product</button>
+    <button (click)="cancel()">Cancel</button>
+  </div>
+</div>

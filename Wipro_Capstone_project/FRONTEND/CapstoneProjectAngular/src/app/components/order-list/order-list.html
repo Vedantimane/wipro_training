@@ -1,0 +1,44 @@
+<!-- src/app/components/admin-orders-list/admin-orders-list.html -->
+
+<div class="orders-container" style="margin: 20px;">
+  <h2>All Orders</h2>
+
+  <div *ngIf="errorMessage" style="color:red; margin-bottom: 10px;">
+    {{ errorMessage }}
+  </div>
+
+  <table border="1" cellpadding="10" cellspacing="0" style="width:100%; border-collapse: collapse;">
+    <thead>
+      <tr>
+        <th>Order ID</th>
+        <th>User ID</th>
+        <th>Products</th>
+        <th>Total Amount</th>
+        <th>Status</th>
+        <th>Order Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{ order.orderId }}</td>
+        <td>{{ order.userId }}</td>
+        <td>
+          <div *ngFor="let item of order.productQuantityMap | keyvalue">
+            Product ID: {{ item.key }}, Qty: {{ item.value }}
+          </div>
+        </td>
+        <td>₹{{ order.totalAmount }}</td>
+        <td>{{ order.orderStatus }}</td>
+        <td>{{ order.orderDate | date:'short' }}</td>
+        <td>
+          <button (click)="cancelOrder(order.orderId)" 
+                  [disabled]="order.orderStatus !== 'PENDING'" 
+                  style="padding:5px 10px; background-color:red; color:white; border:none; border-radius:4px; cursor:pointer;">
+            Cancel
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

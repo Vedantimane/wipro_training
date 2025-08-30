@@ -11,3 +11,9 @@ export interface Product {
   productImgUrl: string;
   dateOfManufacture?: string;    // use string for LocalDate from backend
 }
+
+// src/app/interface/product.ts
+export interface ProductInOrder extends Product {
+  quantityOrdered: number;
+}
+

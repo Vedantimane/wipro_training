@@ -65,10 +65,18 @@ public class ProductController {
         productService.deleteById(id);
         return ResponseEntity.ok("Product deleted successfully");
     }
+    
+    @PutMapping("/{productId}/reduce")
+    public ResponseEntity<String> reduceQuantity(
+            @PathVariable int productId,
+            @RequestParam int quantity) {
 
-//    // ------------------ PUBLIC test endpoint ------------------
-//    @GetMapping("/test")
-//    public String test() {
-//        return "Token is working!";
-//    }
+        try {
+            productService.reduceQuantity(productId, quantity);
+            return ResponseEntity.ok("Quantity reduced successfully");
+        } catch (RuntimeException e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
+    }
+
 }

@@ -18,4 +18,6 @@ public interface ProductService {
 
     Product updateProduct(int productId, Product product);  // new method
 
+	void reduceQuantity(int productId, int quantity);
+
 }

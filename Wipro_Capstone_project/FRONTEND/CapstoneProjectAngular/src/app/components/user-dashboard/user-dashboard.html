@@ -18,6 +18,9 @@
         <p><strong>Manufactured:</strong> {{ product.dateOfManufacture }}</p>
         <p><strong>Price:</strong> {{ product.productPrice | currency:'INR' }}</p>
         <p><strong>Available Qty:</strong> {{ product.productAvailableQty }}</p>
+
+        <!-- Add to Cart Button -->
+        <button (click)="addToCart(product)">Add to Cart</button>
       </div>
     </div>
   </div>
@@ -27,6 +30,7 @@
     <p>No products available</p>
   </ng-template>
 </div>
+
 <!-- Search Products -->
 <div class="search-box">
   <label>Search Products: 

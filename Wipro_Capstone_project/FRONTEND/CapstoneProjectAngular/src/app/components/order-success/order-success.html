@@ -1,0 +1,36 @@
+<h2>Order Success</h2>
+
+<div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+
+<table *ngIf="orders.length > 0">
+  <thead>
+    <tr>
+      <th>Order ID</th>
+      <th>Products</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of orders">
+      <td>{{ order.orderId }}</td>
+      <td>
+        <ul>
+          <li *ngFor="let item of orderProductsMap[order.orderId]">
+            {{ item.productName }} x {{ item.quantityOrdered }} - ₹{{ item.productPrice }}
+          </li>
+        </ul>
+      </td>
+      <td>{{ order.orderStatus }}</td>
+      <td>
+        <button *ngIf="order.orderStatus !== 'CANCELLED'" (click)="cancelOrder(order.orderId)">
+          Cancel
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="orders.length === 0 && !errorMessage">
+  No orders found.
+</div>

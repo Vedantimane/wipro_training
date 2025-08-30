@@ -1,63 +1,39 @@
 <div class="admin-container">
   <h2>Admin Dashboard - Products</h2>
 
-  <!-- Error Message -->
-  <div *ngIf="errorMessage" class="error">
-    {{ errorMessage }}
-  </div>
+  <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
 
-  <!-- ------------------ CREATE PRODUCT ------------------ -->
-  <div class="product-form">
-    <h3>Add New Product</h3>
-    <label>Name: <input [(ngModel)]="newProduct.productName" /></label>
-    <label>Category: <input [(ngModel)]="newProduct.productCat" /></label>
-    <label>Description: <input [(ngModel)]="newProduct.productDesc" /></label>
-    <label>Make: <input [(ngModel)]="newProduct.make" /></label>
-    <label>Qty: <input type="number" [(ngModel)]="newProduct.productAvailableQty" /></label>
-    <label>Price: <input type="number" [(ngModel)]="newProduct.productPrice" /></label>
-    <label>Image URL: <input [(ngModel)]="newProduct.productImgUrl" /></label>
-    <label>Date of Manufacture: <input type="date" [(ngModel)]="newProduct.dateOfManufacture" /></label>
-    <button (click)="createProduct()">Add Product</button>
-  </div>
+  <!-- Add Product Button -->
+  <button (click)="addProduct()">Add New Product</button>
 
-  <!-- ------------------ UPDATE PRODUCT ------------------ -->
-  <div *ngIf="selectedProduct" class="product-form edit-form">
-    <h3>Edit Product</h3>
-    <label>Name: <input [(ngModel)]="selectedProduct.productName" /></label>
-    <label>Category: <input [(ngModel)]="selectedProduct.productCat" /></label>
-    <label>Description: <input [(ngModel)]="selectedProduct.productDesc" /></label>
-    <label>Make: <input [(ngModel)]="selectedProduct.make" /></label>
-    <label>Qty: <input type="number" [(ngModel)]="selectedProduct.productAvailableQty" /></label>
-    <label>Price: <input type="number" [(ngModel)]="selectedProduct.productPrice" /></label>
-    <label>Image URL: <input [(ngModel)]="selectedProduct.productImgUrl" /></label>
-    <label>Date of Manufacture: <input type="date" [(ngModel)]="selectedProduct.dateOfManufacture" /></label>
-    <button (click)="updateProduct()">Update Product</button>
-    <button (click)="cancelEdit()">Cancel</button>
-  </div>
-
-  <!-- ------------------ PRODUCT LIST ------------------ -->
-  <div class="product-list">
-    <h3>Existing Products</h3>
-    <div *ngIf="products.length === 0">No products available</div>
-    <div class="product-card" *ngFor="let product of products">
-      <img [src]="product.productImgUrl" [alt]="product.productName" />
-      <div class="product-info">
-        <h4>{{ product.productName }}</h4>
-        <p>Category: {{ product.productCat }}</p>
-        <p>Description: {{ product.productDesc }}</p>
-        <p>Make: {{ product.make }}</p>
-        <p>Qty: {{ product.productAvailableQty }}</p>
-        <p>Price: {{ product.productPrice | currency:'INR' }}</p>
-        <p>Date: {{ product.dateOfManufacture }}</p>
-        <button (click)="selectProduct(product)">Edit</button>
-        <button (click)="deleteProduct(product.productId)">Delete</button>
-      </div>
+  <!-- Product List -->
+  <div *ngIf="products.length === 0">No products available</div>
+  
+  <div class="product-card" *ngFor="let product of filteredProducts">
+    <img [src]="product.productImgUrl" [alt]="product.productName" />
+    <div class="product-info">
+      <h4>{{ product.productName }}</h4>
+      <p>Category: {{ product.productCat }}</p>
+      <p>Description: {{ product.productDesc }}</p>
+      <p>Make: {{ product.make }}</p>
+      <p>Qty: {{ product.productAvailableQty }}</p>
+      <p>Price: {{ product.productPrice | currency:'INR' }}</p>
+      <p>Date: {{ product.dateOfManufacture }}</p>
+      <button (click)="editProduct(product.productId!)">Edit</button>
+      <button (click)="deleteProduct(product.productId)">Delete</button>
     </div>
   </div>
+<div style="margin-bottom: 20px;">
+  <button (click)="addProduct()" style="margin-right:10px;">Add Product</button>
+  <button (click)="viewAllOrders()" style="background-color: #007bff; color: white; padding: 8px 15px; border: none; border-radius: 5px; cursor: pointer;">
+    View All Orders
+  </button>
 </div>
-<!-- Search Products -->
-<div class="search-box">
-  <label>Search Products: 
-    <input type="text" [(ngModel)]="searchTerm" placeholder="Type to search..." />
-  </label>
+
+  <!-- Search Box -->
+  <div class="search-box">
+    <label>Search Products: 
+      <input type="text" [(ngModel)]="searchTerm" placeholder="Type to search..." />
+    </label>
+  </div>
 </div>

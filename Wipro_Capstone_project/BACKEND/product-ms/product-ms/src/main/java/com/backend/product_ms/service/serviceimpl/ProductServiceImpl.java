@@ -61,7 +61,20 @@ public class ProductServiceImpl implements ProductService {
             
             return productRepository.save(existingProduct);
         } else {
-            return null; // or throw an exception if preferred
+            return null; 
         }
     }
+    
+    public void reduceQuantity(int productId, int quantity) {
+        Product product = productRepository.findById(productId)
+                .orElseThrow(() -> new RuntimeException("Product not found with id: " + productId));
+
+        if (product.getProductAvailableQty() < quantity) {
+            throw new RuntimeException("Insufficient stock for product id: " + productId);
+        }
+
+        product.setProductAvailableQty(product.getProductAvailableQty() - quantity);
+        productRepository.save(product);
+    }
+    
 }
